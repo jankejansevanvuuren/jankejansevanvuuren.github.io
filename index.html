@@ -3,65 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Janke Janse van Vuuren's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <h1>Janke Janse van Vuuren</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <nav id="desktop-nav">
+        <div class="logo">Janke Janse van Vuuren</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </header>
-
-    <main>
-        <section id="about" class="container">
-            <h2>About Me</h2>
-            <p>Hello! I am Janke Janse van Vuuren, a passionate coder and developer. This portfolio showcases my projects, skills, and experience in software development.</p>
-            <img src="profile.jpg" alt="Janke Janse van Vuuren" class="profile-image">
-        </section>
-
-        <section id="projects" class="container">
-            <h2>Projects</h2>
-            <div class="grid">
-                <div class="project">
-                    <h3>Project 1</h3>
-                    <p>Description of project 1. It showcases my skills in HTML, CSS, and JavaScript.</p>
-                    <a href="https://github.com/jankejansevanvuuren/project1" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project">
-                    <h3>Project 2</h3>
-                    <p>Description of project 2. This project focuses on backend development using Node.js.</p>
-                    <a href="https://github.com/jankejansevanvuuren/project2" target="_blank">View on GitHub</a>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Janke Janse van Vuuren</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links" id="menu-links">
+                <ul>
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <dif class="section__pic-container">
+            <img src="./assets/profile-pic.png" alt="Janke profile picture">
+        </dif>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Janke Janse Van Vuuren</h1>
+            <p class="section__text__p2">Sales Systems & E-Commerce Specialist</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" 
+                onclick="window.open('')">Download CV</button>
+                <button class="btn btn-color-1" 
+                onclick="location.href='./#contact'">Contact Info</button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My linkedin Profile" 
+                class="icon" onclick="location.href='https://www.linkedin.com/in/janke-janse-van-vuuren-4777bb277/'">
+                <img src="./assets/github.png" alt="My Github Profile" 
+                class="icon" onclick="location.href='https://github.com/jankejansevanvuuren'">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./assets/about-pic.png" alt="Profile Picture" class="about-pic">
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience.png" alt="Experience Icon" class="icon">
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <section id="contact" class="container">
-            <h2>Contact Me</h2>
-            <form action="https://formspree.io/f/your-form-id" method="POST">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
         </div>
-    </footer>
-</body>
-</html>
-
-        <p>&copy; 2024 Janke Janse van Vuuren. All rights reserved.</p>
-    </footer>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
